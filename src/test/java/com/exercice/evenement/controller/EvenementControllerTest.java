@@ -35,12 +35,5 @@ public class EvenementControllerTest {
 	}
 	
 	
-	/*@Test
-	@DisplayName("Test get event with id = 1")
-	void getEventTest()  {
-		Mockito.when(evService.getEvent(1L)).thenReturn(null)
-		assertEquals("{\\\"id\\\":1,\\\"nom\\\":null,\\\"description\\\":null,\\\"debut\\\":null,\\\"fin\\\":null}", 
-				result.getResponse().getContentAsString());
-	}
-*/
+	
 }
