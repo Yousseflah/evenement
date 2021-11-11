@@ -1,0 +1,23 @@
+version: '3'
+
+
+services:
+  mysql-standalone:
+    image: mysql:8.0.27
+    container_name: mysql-standalone
+    environment:
+      - MYSQL_ROOT_PASSWORD=youssef
+      - MYSQL_DATABASE=evenements
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=p@ssword!
+      
+    springboot-docker-container:
+      image: evenementapp
+      container_name: app
+      ports: 9090:8083
+      build:
+        context: ./
+        dockerfile: Dockerfile
+      depends_on:
+        - mysql_standalone
+        
